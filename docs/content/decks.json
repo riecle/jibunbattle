@@ -1,0 +1,59 @@
+{
+  "_comment": "デッキは『同じ刻印をどう塗るか』。fit_keys はフィールドの value.key と照合し、blend/clash を決める。foreground はどの入力を前面に出すか、tone は語り口。clash するほど『いや見えてるだろw』系のシェアされやすい場面になる。",
+  "decks": [
+    {
+      "id": "kenjitsu",
+      "name": "堅実型",
+      "tagline": "派手さより、続けてきたことで殴る。",
+      "foreground": ["weakness_handling", "continuity"],
+      "tone": "measured",
+      "fit_keys": ["continuity", "ownership"],
+      "clash_keys": ["risk"]
+    },
+    {
+      "id": "shujinkou",
+      "name": "主人公型",
+      "tagline": "可能性と熱量を全面に出す。",
+      "foreground": ["free_text", "strong_env"],
+      "tone": "expansive",
+      "fit_keys": ["risk"],
+      "clash_keys": ["conversion", "ownership"]
+    },
+    {
+      "id": "sanbou",
+      "name": "参謀型",
+      "tagline": "他人からの評価と、担った範囲で語る。",
+      "foreground": ["others_say", "ownership"],
+      "tone": "analytical",
+      "fit_keys": ["ownership", "continuity"],
+      "clash_keys": []
+    },
+    {
+      "id": "hankotsu",
+      "name": "反骨型",
+      "tagline": "弱点を隠さず、刃にして出す。",
+      "foreground": ["weakness_handling", "free_text"],
+      "tone": "defiant",
+      "fit_keys": [],
+      "clash_keys": ["conversion", "ownership", "continuity"]
+    },
+    {
+      "id": "shokunin",
+      "name": "職人型",
+      "tagline": "一つの強みを、静かに深く。",
+      "foreground": ["strength", "strong_env"],
+      "tone": "understated",
+      "fit_keys": ["continuity"],
+      "clash_keys": ["risk"]
+    },
+    {
+      "id": "survivor",
+      "name": "サバイバー型",
+      "tagline": "現実をしのいできた地力で勝負する。",
+      "foreground": ["weakness_handling", "strong_env"],
+      "tone": "gritty",
+      "fit_keys": ["ownership", "risk"],
+      "clash_keys": []
+    }
+  ]
+}

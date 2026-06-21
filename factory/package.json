@@ -1,0 +1,12 @@
+{
+  "name": "unproven-monster-factory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Phase 1 offline content factory (Gemini generate + critic firewall). Phase 0 では不要。",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "critique": "node critique.mjs",
+    "generate": "node generate.mjs"
+  }
+}
