@@ -1,0 +1,30 @@
+# Phase 1 の工場。Phase 0 では動かさなくていい（手動トリガーのみ + 既定で週次はコメントアウト）。
+# 有効化手順:
+#   1. リポジトリ Settings → Secrets and variables → Actions → New secret
+#      Name: GEMINI_API_KEY  /  Value: あなたのGeminiキー
+#   2. 下の schedule のコメントを外すと週次でcriticが回る。
+#   3. それまでは Actions タブから「Run workflow」で手動実行できる。
+name: factory
+
+on:
+  workflow_dispatch:
+    inputs:
+      field:
+        description: "対象フィールドID"
+        default: "shihonshugi"
+  # schedule:
+  #   - cron: "0 0 * * 1"   # 毎週月曜 00:00 UTC
+
+jobs:
+  critique:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: critic を回す（防火壁の自動審査）
+        working-directory: factory
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node critique.mjs "${{ github.event.inputs.field || 'shihonshugi' }}"

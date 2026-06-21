@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>未証明の怪物</title>
+<meta name="description" content="あなたの価値は、まだ証明されていない。でも、測定することはできる。フィールド別に挑み、見せ方を塗り替え、自分の現在地を観測する。" />
+<meta property="og:title" content="未証明の怪物" />
+<meta property="og:description" content="証明はない。でも戦わせると妙に強い。フィールドに挑んで、自分の現在地を観測する。" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<main class="wrap">
+
+  <header class="hero">
+    <p class="hero__eyebrow">UNPROVEN · MONSTER</p>
+    <h1 class="hero__title">あなたの価値は、<br>まだ証明されていない。</h1>
+    <p class="hero__lede">でも、測定することはできる。<br>フィールドに挑み、見せ方を塗り替え、自分の現在地を観測する。</p>
+    <p class="hero__rule">勝敗は評価ではなく、観測だ。</p>
+  </header>
+
+  <section class="step" id="step-kokuin">
+    <div class="step__head"><span class="step__no">刻印 01</span><h2 class="step__title">核刻印</h2></div>
+    <p class="step__desc">いまの自己認識を刻む。実績はいらない。年収も会社名もいらない。</p>
+
+    <div class="field-group">
+      <label class="lbl">長所（最低1つ、最大3つ）</label>
+      <input class="inp" id="s1" placeholder="長所 1" autocomplete="off" />
+      <input class="inp" id="s2" placeholder="長所 2" autocomplete="off" />
+      <input class="inp" id="s3" placeholder="長所 3" autocomplete="off" />
+    </div>
+    <div class="field-group">
+      <label class="lbl" for="weakness">弱点（1つ）</label>
+      <input class="inp" id="weakness" placeholder="隠さなくていい" autocomplete="off" />
+    </div>
+    <div class="field-group">
+      <label class="lbl" for="others">人からよく言われること</label>
+      <input class="inp" id="others" placeholder="褒められること、呆れられること、どちらでも" autocomplete="off" />
+    </div>
+    <div class="field-group">
+      <label class="lbl" for="strongenv">自分が強くなる環境</label>
+      <input class="inp" id="strongenv" placeholder="どういう場だと力が出るか" autocomplete="off" />
+    </div>
+    <div class="field-group">
+      <label class="lbl" for="freetext">自由記述</label>
+      <textarea class="inp inp--area" id="freetext" rows="3" placeholder="言いづらいけど誇っていること、何でも"></textarea>
+    </div>
+  </section>
+
+  <section class="step" id="step-field">
+    <div class="step__head"><span class="step__no">観測点 01</span><h2 class="step__title">資本主義フィールド</h2></div>
+    <p class="step__desc" id="field-tagline"></p>
+
+    <label class="lbl lbl--center">見せ方デッキを選ぶ — 同じ刻印を、どう塗るか</label>
+    <div class="decks" id="decks"></div>
+
+    <p class="hint" id="hint"></p>
+    <button class="btn btn--primary" id="submit" disabled>このフィールドに挑む</button>
+  </section>
+
+  <section id="result" class="result"></section>
+  <section id="ledger" class="ledger"></section>
+
+  <footer class="foot">
+    <p>これは最初の観測点であって、あなたの全価値ではない。<br>この世界で負けても、別の世界では勝てるかもしれない。</p>
+  </footer>
+</main>
+
+<!-- 計測: GoatCounter（無料）。READMEの手順で data-goatcounter を自分のものに差し替える。未設定でもアプリは動く。 -->
+<script data-goatcounter="https://mishoumeinokaibutu.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
